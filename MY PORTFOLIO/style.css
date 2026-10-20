@@ -1,0 +1,215 @@
+/* Includes padding and borders inside an element's width. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #243449;
+  background: #f2f5f8;
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background: #203b55;
+}
+
+.logo {
+  margin: 0 0 12px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+section {
+  margin-bottom: 24px;
+  padding: 28px;
+  background: white;
+  border: 1px solid #dce4eb;
+  border-radius: 12px;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  color: #203b55;
+}
+
+h1 {
+  margin: 12px 0;
+  font-size: 36px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 26px;
+}
+
+a {
+  color: #245d88;
+}
+
+/* Flexbox places the photo and introduction next to each other. */
+.home {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.profile {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #526578;
+}
+
+.tagline {
+  font-style: italic;
+}
+
+.button {
+  font: inherit;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 18px;
+  color: white;
+  background: #245d88;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #203b55;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.skills li {
+  padding: 8px 14px;
+  background: #eaf1f7;
+  border-radius: 6px;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.card {
+  flex: 1 1 220px;
+  padding: 16px;
+  border: 1px solid #dce4eb;
+  border-radius: 8px;
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+footer {
+  padding: 16px;
+  text-align: center;
+  color: white;
+  background: #203b55;
+}
+
+/* JavaScript adds the dark-mode class to activate these colors. */
+#theme-button {
+  margin-top: 18px;
+  padding: 8px 16px;
+  font: inherit;
+  color: #203b55;
+  background: white;
+  border: 1px solid #dce4eb;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#theme-button:hover {
+  background: #eaf1f7;
+}
+
+body.dark-mode {
+  color: #edf2f7;
+  background: #101923;
+}
+
+.dark-mode section {
+  background: #1d2c3b;
+  border-color: #526578;
+}
+
+.dark-mode h1, .dark-mode h2, .dark-mode h3,
+.dark-mode .label, .dark-mode a {
+  color: #b9ddff;
+}
+
+.dark-mode .card {
+  border-color: #526578;
+}
+
+.dark-mode .skills li {
+  background: #30465b;
+}
+
+.dark-mode nav a, .dark-mode .button {
+  color: white;
+}
+
+/* Applies these rules only when the screen is 600px wide or smaller. */
+@media (max-width: 600px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+}
